@@ -1,0 +1,20 @@
+
+Legge til lege i legetListe:
+
+  public void leggTilLege(String navn, int kontrollID)
+  
+Legge til pasient i pasientListe:
+  
+  public void leggTilPasient(String navn, String fodselsnummer)
+  
+Legg til legemiddel i lmListe:
+
+  public void leggTilLegemiddel(String navn, String type, int pris, int virkestoff, int styrke)
+
+Legg til resept i reseptListe:
+
+  public boolean leggTilResept(int lmNummer, String legenavn, int pasientId, String type, int reit) throws UlovligUtskrift
+  
+Bruk resept i legesystemet:
+
+  public int brukResept(int pasientId, int reseptTall)
