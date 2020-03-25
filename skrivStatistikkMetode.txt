@@ -1,0 +1,18 @@
+  public void skrivUtStatistikk() {
+
+    System.out.println("Antall resepter med narkotisk legemiddel: " + antallNarkotisk);
+    System.out.println("Antall resepter med vanedannende legemiddel: " + antallVanedannende);
+
+    System.out.println("Antall leger som har skrevet ut minst en resept med narkotisk legemiddel (navn, antall resepter): ");
+    for (Lege l : legeListe) {
+      if (l.hentAntallNarkotisk() > 0)
+        System.out.println(l.hentNavn() + ": " + l.hentAntallNarkotisk());
+    }
+
+    System.out.println("Antall pasienter med en gyldig resept paa narkotisk legemiddel: ");
+    for (Pasient p : pasientListe) {
+      if (p.hentAntallNarkotisk() > 0)
+        System.out.println(p.hentNavn() + ": " + p.hentAntallNarkotisk());
+    }
+
+  }
